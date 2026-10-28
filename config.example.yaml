@@ -1,0 +1,40 @@
+# This file is copied automatically on first launch.
+# Most users should use the browser setup page instead of editing this file.
+
+project:
+  name: Your Project Name
+  location: City, Country
+  year_range:
+  - 2020
+  - 2030
+  lead_firm: Your Organisation
+  consultants: []
+  authorities: []
+  notes: Brief project description used as classification context.
+
+paths:
+  # Use a Windows path, for example: C:/Users/YourName/Documents/Project
+  input_dir: C:/path/to/your/project/folder
+  output_csv: outputs/results.csv
+  taxonomy_path: taxonomy.yaml
+
+processing:
+  provider: openrouter     # openrouter | gemini | claude | codex | openai | deepseek | custom
+  sample_n: 20              # Use 0 or leave blank to process all files.
+  model: ""                # Choose a model in the setup page.
+  base_url: https://openrouter.ai/api/v1
+  parallel_workers: 4
+  api_timeout: 60
+  delay: 0.3
+  incremental: false
+
+age_analysis:
+  warn_predates_years: 10
+  warn_postproject_years: 3
+
+configuration:
+  port: 5173
+
+dashboard:
+  port: 5174
+  auto_launch: true

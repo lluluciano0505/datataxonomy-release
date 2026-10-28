@@ -1,0 +1,44 @@
+# User secrets and local configuration
+.env
+config.yaml
+
+# User-generated project data
+outputs/
+output/
+logs/
+*.pid
+saved_configs.json
+.reviewed_files.json
+*.csv
+*.csv.*
+*.run.json
+*.resume.json
+*.resume.jsonl
+*.taxonomy.yaml
+*.bak
+
+# Reference demo outputs are intentionally versioned under demo_data/
+!demo_data/**/*.csv
+!demo_data/**/*.yaml
+
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Detailed review evidence stays local
+*.audit.json
+
+# Local project configurations and generated taxonomy files
+configs/
+taxonomies/*.yaml
+!taxonomies/default.yaml
+!taxonomies/bijlmermeer_demo.yaml
+
+# Independently prepared release copies and private manuscript checks
+/release/
