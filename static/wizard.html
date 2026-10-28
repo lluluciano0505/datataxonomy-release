@@ -785,7 +785,7 @@
     if (selected && !models.some(model => model.id === selected)) {
       select.add(new Option(selected + (modelCatalog.some(model => model.id === selected) ? ' (current selection)' : ' (saved selection · verify availability)'), selected));
     }
-    for (const [tier, label] of [['budget','Budget · 经济型'],['higher','Higher-priced · 较高价'],['available','Available models']]) {
+    for (const [tier, label] of [['budget','Budget'],['higher','Higher-priced'],['available','Available models']]) {
       const group = document.createElement('optgroup');
       group.label = label;
       models.filter(model => model.tier === tier).forEach(model => group.appendChild(new Option(model.name === model.id ? model.id : model.name + ' · ' + model.id, model.id)));
